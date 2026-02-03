@@ -25,7 +25,7 @@
   </head>
   <body>
     <header>
-      <div class="logo">W.</div>
+      <a class="logo">W.</a>
 
       <nav>
         <a href="home.html">Home</a>
@@ -38,10 +38,35 @@
 
     <main>
       <section aria-labelledby="featured-heading">
-        <img
-          src="/assets/images/image-web-3-desktop.jpg"
-          alt="Abstract illustration representing the future of Web 3.0"
-        />
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              /assets/images/image-web-3-desktop.jpg 1x,
+              /assets/images/image-web-3-desktop.jpg 2x
+            "
+            type="image/jpeg"
+          />
+          <img
+            src="/assets/images/image-web-3-mobile.jpg"
+            alt="Abstract illustration representing the future of Web 3.0"
+            loading="lazy"
+          />
+        </picture>
+
+        <video
+          controls
+          poster="/assets/images/video-poster.jpg"
+          preload="metadata"
+          playsinline
+          crossorigin="anonymous"
+          width="540"
+          height="260"
+        >
+          <source src="/assets/video.mp4" type="video/mp4" />
+          Your browser does not support the video element. Please update your
+          browser.
+        </video>
 
         <article>
           <h1 id="featured-heading">The Bright Future of Web 3.0?</h1>
@@ -87,10 +112,7 @@
         </h2>
 
         <article>
-          <img
-            src="/assets/images/image-retro-pcs.jpg"
-            alt="Computer setup"
-          />
+          <img src="/assets/images/image-retro-pcs.jpg" alt="Computer setup" />
           <h3>Reviving Retro PCs</h3>
           <p>What happens when old PCs are given modern upgrades?</p>
         </article>
